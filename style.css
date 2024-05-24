@@ -8,16 +8,6 @@ html, body {
   color: #D4D0FF;
 }
 
-.nav-menu {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 103px;
-  display: flex;
-  background: linear-gradient(0deg, rgba(47, 45, 97, 0.00) 0%, rgba(47, 45, 97, 0.30) 13%, rgba(47, 45, 97, 0.60) 29%, rgba(47, 45, 97, 0.80) 53.5%, #2F2D61 100%);
-  z-index: 1000;
-}
-
 .dm-sans-header {
   color: #D4D0FF;
   font-family: "DM Sans";
@@ -27,7 +17,70 @@ html, body {
   line-height: normal;
 }
 
-.container {
-  height: 100%;
+.dm-sans-menu {
+  color: #D4D0FF;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#nav {
+  flex-grow: 1;
   display: flex;
+  justify-content: center;
+}
+
+#nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 100%;
+}
+
+#nav li {
+  margin: 0 50px;
+  }
+
+#nav a {
+  text-decoration: none; 
+  padding:46px 28px;
+  display: inline-block;
+  }
+
+.nav-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 103px;
+  display: flex;
+  background: linear-gradient(0deg, rgba(47, 45, 97, 0.00) 0%, rgba(47, 45, 97, 0.30) 13%, rgba(47, 45, 97, 0.60) 29%, rgba(47, 45, 97, 0.80) 53.5%, #2F2D61 100%);
+  z-index: 1000;
+  align-items: center;
+}
+
+.icon{
+  color: #D4D0FF;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  margin-left: 42px;
+}
+
+.blur-box{
+  position: absolute;
+  top: 103px;
+  left: 73px;
+  width: calc(100% - 146px);
+  bottom: 73px;
+  background: rgba(217, 217, 217, 0.20);
+  backdrop-filter: blur(5px);
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
 }
