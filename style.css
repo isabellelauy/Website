@@ -15,7 +15,6 @@ html, body {
   height: 103px;
   display: flex;
   background: linear-gradient(0deg, rgba(47, 45, 97, 0.00) 0%, rgba(47, 45, 97, 0.30) 13%, rgba(47, 45, 97, 0.60) 29%, rgba(47, 45, 97, 0.80) 53.5%, #2F2D61 100%);
-  flex-shrink: 0; 
   z-index: 1000;
 }
 
