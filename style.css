@@ -76,6 +76,7 @@ html, body {
   position: absolute;
   top: 103px;
   left: 73px;
+  padding:  50px 50px;
   width: calc(100% - 146px);
   bottom: 73px;
   background: rgba(217, 217, 217, 0.20);
@@ -83,4 +84,22 @@ html, body {
   display: flex;
   left: 50%;
   transform: translateX(-50%);
+  box-sizing: border-box;
+}
+
+.headshot{
+  position: relative;
+  box-sizing: border-box;
+  aspect-ratio: 1 / 1;
+  height: calc(100% - 225px);
+  width: calc(100%-100px);
+  background: #fff;
+  border-radius: 10px;
+}
+
+.homepage-grid{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: center;
 }
