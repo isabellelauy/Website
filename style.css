@@ -81,6 +81,73 @@ html, body {
   margin-left: 42px;
 }
 
+/* NEW STUFF */
+
+.off-screen-menu{
+  background-color: rgba(47, 45, 97, 0.80);
+  backdrop-filter: blur(20px);
+  height: 100%;
+  max-width: 50%;
+  position: fixed;
+  top: 0;
+  right: -50%;
+  flex-direction: column;
+  font-size: 3rem;
+  transition: .3s ease;
+}
+
+.off-screen-menu .active{
+  right: 0;
+}
+
+/* note nav has become nav-menu */
+
+.ham-menu{
+  height: 50px;
+  width: 50px;
+  top: 26px;
+  right: 0px;
+  position: fixed;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  display: none;
+}
+
+.ham-menu span{
+  height: 3px;
+  width: 100%;
+  background-color: #D4D0FF;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3 ease;
+}
+
+.ham-menu span:nth-child(1){
+  top: 25%;
+}
+
+.ham-menu span:nth-child(3){
+  top: 75%;
+}
+
+.ham-menu .active span:nth-child(1){
+  top: 50%;
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.ham-menu .active span:nth-child(2){
+  opacity: 0;
+}
+
+.ham-menu .active span:nth-child(3){
+  top: 50%;
+  transform: translate(-50%,50%) rotate(-45deg);
+}
+
 .blur-box{
   position: absolute;
   top: 103px;
@@ -119,10 +186,68 @@ html, body {
   flex-grow: 1;
 }
 
+.status{
+  width: 100%;
+  height: 5px;
+  background: rgba(245, 245, 245, 0.30);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+.status-filled{
+  height: 100%;
+  background: #F5F5F5;
+  width: 40%;
+}
+
 .controls{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.controls .prev{
+  background: url('back.png') no-repeat center center;
+  background-color: transparent;
+  background-size: contain;
+  width: 36px;
+  height: 39px;
+  cursor: pointer;
+  border: none;
+
+  &:active{
+    scale: 0.95;
+  }
+}
+
+.controls .play{
+  background: url('play.png') no-repeat center center;
+  background-color: transparent;
+  background-size: contain;
+  width: 36px;
+  height: 39px;
+  cursor: pointer;
+  border: none;
+
+  &:active{
+    scale: 0.95;
+  }
+}
+
+.controls .next {
+  background: url('next.png') no-repeat center center;
+  background-color: transparent;
+  background-size: contain;
+  width: 36px;
+  height: 39px;
+  cursor: pointer;
+  border: none;
+
+  &:active{
+    scale: 0.95;
+  }
 }
 
 @media (max-width: 600px) {
@@ -144,6 +269,15 @@ html, body {
     line-height: normal;
   }
 
+  #nav {
+    display: none;
+  }
+
+  .ham-menu {
+    display: flex;
+    margin-right: 73px;
+  }
+
   .homepage-grid2 {
     grid-template-columns: 1fr;
     text-align: center;
@@ -154,5 +288,7 @@ html, body {
     width: 100%;
     padding-top: 100%;
   }
+
+
 
 }
