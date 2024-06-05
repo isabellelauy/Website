@@ -8,10 +8,19 @@ html, body {
   color: #D4D0FF;
 }
 
-.dm-sans-header {
+.dm-sans-title {
   color: #D4D0FF;
   font-family: "DM Sans";
   font-size: 55px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.dm-sans-header{
+  color: #D4D0FF;
+  font-family: "DM Sans";
+  font-size: 35px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -262,7 +271,53 @@ html, body {
   }
 }
 
-@media (max-width: 600px) {
+.carousel{
+  position: absolute;
+  top: 1030px; /* This needs to be changed */
+  left: 72px;
+  display: grid;
+  width: calc(100% - 72px);
+  gap: 4%;
+  grid-auto-flow: column; 
+  grid-auto-columns: 19%;
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.carousel::after {
+  content: '';
+  display: block;
+  width: 15px; /* Spacer width */
+  flex-shrink: 0;
+}
+
+/* Optional: Hide scrollbar for a cleaner look */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item{
+  align-items: center;
+}
+
+.carousel-box {
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  padding-top: 100%;
+}
+
+.snaps-inline{
+  scroll-snap-type: inline mandatory;
+}
+
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+
+
+@media (max-width: 1000px) {
   .dm-sans-header {
     color: #D4D0FF;
     font-family: "DM Sans";
@@ -301,6 +356,11 @@ html, body {
     padding-top: 100%;
   }
 
+  .carousel{
+    gap: 2%;
+    grid-auto-flow: column; 
+    grid-auto-columns: 45%;
 
+  }
 
 }
