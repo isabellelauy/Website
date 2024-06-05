@@ -26,13 +26,34 @@ html, body {
   line-height: normal;
 }
 
-.dm-sans-subheader{
+.dm-sans-subheader1{
   color: #D4D0FF;
   font-family: "DM Sans";
   font-size: 26px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  margin: 12px 0 0 0;
+}
+
+.dm-sans-subheader2{
+  color: #D4D0FF;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: normal;
+  margin: 0;
+}
+
+.dm-sans-date{
+  color: #D4D0FF;
+  font-family: "DM Sans";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 12px 0 0 0;;
 }
 
 .dm-sans-menu {
@@ -277,7 +298,7 @@ html, body {
   left: 72px;
   display: grid;
   width: calc(100% - 72px);
-  gap: 4%;
+  gap: 3%;
   grid-auto-flow: column; 
   grid-auto-columns: 19%;
 
@@ -292,13 +313,13 @@ html, body {
   flex-shrink: 0;
 }
 
-/* Optional: Hide scrollbar for a cleaner look */
 .carousel::-webkit-scrollbar {
   display: none;
 }
 
 .carousel-item{
-  align-items: center;
+  align-items: start;
+
 }
 
 .carousel-box {
