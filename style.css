@@ -369,6 +369,49 @@ html, body {
 .footer-icons{
   display: flex;
   justify-self: end;
+  gap: 2rem;
+}
+
+.footer-icons .email{
+  background: url('email.png') no-repeat center center;
+  background-color: transparent;
+  background-size: contain;
+  width: 54px;
+  height: 54px;
+  cursor: pointer;
+  border: none;
+
+  &:active{
+    scale: 0.9;
+  }
+}
+
+.footer-icons .linkedin{
+  background: url('linkedin.png') no-repeat center center;
+  background-color: transparent;
+  background-size: contain;
+  width: 54px;
+  height: 54px;
+  cursor: pointer;
+  border: none;
+
+  &:active{
+    scale: 0.9;
+  }
+}
+
+.footer-icons .github {
+  background: url('github.png') no-repeat center center;
+  background-color: transparent;
+  background-size: contain;
+  width: 54px;
+  height: 54px;
+  cursor: pointer;
+  border: none;
+
+  &:active{
+    scale: 0.9;
+  }
 }
 
 @media (max-width: 1000px) {
