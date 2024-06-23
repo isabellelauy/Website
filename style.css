@@ -4,6 +4,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
   background-color: #2F2D61;
   color: #D4D0FF;
 }
@@ -296,21 +297,15 @@ html, body {
 .carousel{
   position: absolute;
   display: grid;
-  width: calc(100%);
+  width: calc(100% - 72px);
   gap: 3%;
   grid-auto-flow: column; 
   grid-auto-columns: 19%;
   scroll-padding-left: 72px;
+  margin-left: 72px;
 
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-}
-
-.carousel::before {
-  content: '';
-  display: block;
-  width: 72px; /* Spacer width */
-  flex-shrink: 0;
 }
 
 .carousel::after {
@@ -394,6 +389,7 @@ html, body {
   height: 54px;
   cursor: pointer;
   border: none;
+  flex-grow
 
   &:active{
     scale: 0.9;
@@ -482,17 +478,12 @@ html, body {
   }
 
   .carousel{
-    gap: 10%;
+    gap: 2%;
+    width: calc(100% - 25px);
     grid-auto-flow: column; 
     grid-auto-columns: 45%;
     scroll-padding-left: 25px;
-  }
-  
-  .carousel::before {
-    content: '';
-    display: block;
-    width: 25px; /* Spacer width */
-    flex-shrink: 0;
+    margin-left: 25px;
   }
   
   .carousel::after {
@@ -500,5 +491,31 @@ html, body {
     display: block;
     width: 17px; /* Spacer width */
     flex-shrink: 0;
+  }
+
+  .footer-grid{
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-icons{
+    justify-self: start;
+    gap: 1rem;
+  }
+
+  .footer-icons .email{
+    width: 40px;
+    height: 40px;
+
+  }
+  
+  .footer-icons .linkedin{
+    width: 40px;
+    height: 40px;
+  }
+  
+  .footer-icons .github {
+    width: 40px;
+    height: 40px;
   }
 }
