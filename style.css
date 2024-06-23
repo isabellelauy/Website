@@ -343,7 +343,7 @@ html, body {
   position: absolute;
   width: 90%;
   height: 3px;
-  top: 240%;
+  top: 243%;
   left: 5%;
   right: 5%;
   background: rgba(255, 255, 255, 0.30);
@@ -351,7 +351,7 @@ html, body {
 
 .footer-grid{
   position: absolute;
-  top: 243%;
+  top: 246%;
   left: 5%;
   width: 90%;
   display: grid;
@@ -389,7 +389,6 @@ html, body {
   height: 54px;
   cursor: pointer;
   border: none;
-  flex-grow
 
   &:active{
     scale: 0.9;
