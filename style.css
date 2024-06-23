@@ -111,6 +111,7 @@ html, body {
   font-style: normal;
   font-weight: 700;
   margin-left: 42px;
+  text-decoration: none;
 }
 
 .off-screen-menu{
@@ -202,12 +203,10 @@ html, body {
   background: rgba(217, 217, 217, 0.20);
   backdrop-filter: blur(5px);
   display: flex;
-  left: 50%;
-  transform: translateX(-50%);
   box-sizing: border-box;
 }
 
-.headshot{
+.headshot-home{
   background: #fff;
   border-radius: 10px;
   width: 100%;
@@ -324,10 +323,21 @@ html, body {
 }
 
 .carousel-box {
+  position: relative;
   background: #fff;
   border-radius: 10px;
   width: 100%;
   padding-top: 100%;
+  overflow: hidden;
+}
+
+.carousel-box img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .snaps-inline{
@@ -339,6 +349,73 @@ html, body {
   scroll-padding-inline: 72px;
 }
 
+.about-grid-container{
+  position: absolute;
+  top: 103px;
+  left: 73px;
+  padding:  50px 50px;
+  width: calc(100% - 146px);
+  bottom: 73px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  box-sizing: border-box;
+}
+
+.about-grid{
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 0 2rem;
+  align-items: start;
+  flex-grow: 1;
+}
+
+.headshot-about{
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  padding-top: 100%;
+}
+
+
+
+/*.blur-box{
+  position: absolute;
+  top: 103px;
+  left: 73px;
+  padding:  50px 50px;
+  width: calc(100% - 146px);
+  bottom: 73px;
+  background: rgba(217, 217, 217, 0.20);
+  backdrop-filter: blur(5px);
+  display: flex;
+  left: 50%;
+  box-sizing: border-box;
+}
+
+.headshot-home{
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  padding-top: 100%;
+}
+
+.homepage-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  flex-grow: 1;
+
+.homepage-grid2{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0 2rem;
+  align-items: center;
+  flex-grow: 1;
+}
+  
+}
+*/
 .footer-divider{
   position: absolute;
   width: 90%;
@@ -408,6 +485,8 @@ html, body {
     scale: 0.9;
   }
 }
+
+
 
 @media (max-width: 1000px) {
   .dm-sans-title {
