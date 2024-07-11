@@ -9,6 +9,8 @@ html, body {
   color: #D4D0FF;
 }
 
+/* Declaring the fonts */
+
 .dm-sans-title {
   color: #D4D0FF;
   font-family: "DM Sans";
@@ -48,6 +50,16 @@ html, body {
   margin: 12px 0 0 0;
 }
 
+.dm-sans-subheader3{
+  color: #D4D0FF;
+  font-family: "DM Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: normal;
+  margin: 12px 0 0 0;
+}
+
 .dm-sans-date{
   color: #D4D0FF;
   font-family: "DM Sans";
@@ -66,6 +78,12 @@ html, body {
   font-weight: 700;
   line-height: normal;
 }
+
+#about-page .dm-sans-date{
+  margin-top: 58px;
+}
+
+/* Page styling goes here */
 
 #nav {
   flex-grow: 1;
@@ -391,6 +409,8 @@ html, body {
   }
 }
 
+/* Footer Syling */
+
 .footer-divider{
   position: absolute;
   width: 90%;
@@ -409,6 +429,22 @@ html, body {
   gap: 2rem;
   align-items: center;
   flex-grow: 1;
+}
+
+#home-page .footer-divider{
+  top: 246%;
+}
+
+#home-page .footer-grid{
+  top: 249%;
+}
+
+#about-page .footer-divider{
+  top: 85%;
+}
+
+#about-page .footer-grid{
+  top: 88%;
 }
 
 .footer-icons{
@@ -459,7 +495,7 @@ html, body {
   }
 }
 
-
+/* Mobile view adjustments here */
 
 @media (max-width: 1000px) {
   .dm-sans-title {
@@ -476,12 +512,8 @@ html, body {
     margin: 12px 0 0 0;
   }
 
-  .dm-sans-subheader2{
-    font-size: 20px;
-  }
-
   .dm-sans-date{
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .blur-box{
@@ -491,7 +523,7 @@ html, body {
     padding:  35px 50px;
     width: calc(100% - 50px);
     bottom: 20px;
-    background: rgba(217, 217, 217, 0.20);
+    background: rgba(217, 217, 217, 0.10);
     backdrop-filter: blur(5px);
     display: flex;
     left: 50%;
@@ -548,22 +580,53 @@ html, body {
     grid-template-columns: 1fr;
   }
 
-.about-grid-container{
-  position: absolute;
-  top: 50px;
-  left: 17px;
-  padding:  35px 25px;
-  width: calc(100% - 34px);
-}
+  .about-grid-container{
+    position: absolute;
+    top: 50px;
+    left: 17px;
+    padding:  35px 25px;
+    width: calc(100% - 34px);
+  }
+
+  #about-page .dm-sans-date {
+    margin-top: 25px;
+  }
+
+  .footer-divider{
+    position: absolute;
+    width: 86%;
+    height: 2px;
+    left: 7%;
+    right: 7%;
+    background: rgba(255, 255, 255, 0.30);
+  }
 
   .footer-grid{
     grid-template-columns: 1fr;
     gap: 2rem;
+    left: 7%;
+    width: 86%;
   }
 
   .footer-icons{
     justify-self: start;
     gap: 1rem;
+  }
+
+  #about-page .footer-divider{
+    top: 162%;
+  }
+
+  #about-page .footer-grid{
+    top: 164%;
+  }
+
+  #home-page .footer-divider{
+    top: 243%;
+  }
+
+  #home-page .footer-grid{
+    top: 246%;
   }
 
   .footer-icons .email{
@@ -581,4 +644,6 @@ html, body {
     width: 40px;
     height: 40px;
   }
+
+
 }
