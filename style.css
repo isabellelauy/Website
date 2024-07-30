@@ -213,42 +213,36 @@ html, body {
 
 /* Page content goes here */
 
-.main-carousel{
-  position: absolute;
-  display: flex;
-  top: 103px;
-  left: 4vw;
-  bottom: 73px;
-  width: 92vw;
-  padding: 0;
-  overflow: hidden;
-}
-
 .main-carousel__track-container{
-  position: absolute;
+  position: relative;
   height: 100%;
-  width: 100%;
   padding: 0;
   margin: 0;
-  display: flex;
+  display: block;
+  overflow: hidden;
 }
 
 .main-carousel__track{
   position: absolute;
+  display: flex;
   text-decoration: none; 
   transition: transform 500ms ease-in;
-  display: flex;
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
+  white-space: nowrap;
 }
 
 .blur-box{
+  position: absolute;
+  top: 103px;
+  left: 4vw;
+  bottom: 73px;
+  width: 92vw;
   border-radius: 10px;
   padding:  50px;
-  height: 100%;
-  width: 92vw;
   margin: 0;
   background: rgba(217, 217, 217, 0.20);
   backdrop-filter: blur(5px);  
@@ -266,17 +260,21 @@ html, body {
 .homepage-grid{
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr 1fr;
   gap: 2rem;
   align-items: center;
   flex-grow: 1;
 }
 
 .homepage-grid2{
+  position: flex;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 0 3rem;
   align-items: center;
   flex-grow: 1;
+  width: 86vw;
+  flex: 0 0 auto;
 }
 
 .status{
@@ -292,7 +290,6 @@ html, body {
 .status-filled{
   height: 100%;
   background: #F5F5F5;
-  width: 40%;
 }
 
 .controls{

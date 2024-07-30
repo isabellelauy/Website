@@ -11,65 +11,37 @@ hamMenu.addEventListener('click', () => {
 
 const track = document.querySelector('.main-carousel__track');
 const slides = Array.from(track.children);
+const nextButton = document.querySelector('.next');
+const prevButton = document.querySelector('.prev');
+
 const slideWidth = slides[0].getBoundingClientRect().width;
 
 const setSlidePosition = (slide, index) => {
-    slide.style.left = (slideWidth * index) + 'px';
-};
+    slide.style.left = slideWidth*index + 'px';
+}
 
 slides.forEach(setSlidePosition);
 
 const moveToSlide = (track, currentSlide, targetSlide) => {
-    if (!targetSlide) return; // Check if targetSlide exists
-    track.style.transition = 'transform 400ms ease-in'; // Ensure transition is applied
     track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
     currentSlide.classList.remove('current-slide');
     targetSlide.classList.add('current-slide');
 };
 
-// Function to initialize controls for each slide
-const initializeSlideControls = (slide) => {
-    const prevButton = slide.querySelector('.prev');
-    const nextButton = slide.querySelector('.next');
-    
-    prevButton.addEventListener('click', () => {
-        const currentSlide = track.querySelector('.current-slide');
-        const prevSlide = currentSlide.previousElementSibling;
-        if (prevSlide) { // Check if prevSlide exists
-            moveToSlide(track, currentSlide, prevSlide);
-        }
-    });
+prevButton.addEventListener('click', e=> {
+    const currentSlide = track.querySelector('.current-slide');
+    const prevSlide = currentSlide.previousElementSibling;
 
-    nextButton.addEventListener('click', () => {
-        const currentSlide = track.querySelector('.current-slide');
-        const nextSlide = currentSlide.nextElementSibling;
-        if (nextSlide) { // Check if nextSlide exists
-            moveToSlide(track, currentSlide, nextSlide);
-        }
-    });
-};
-
-// Initialize controls for each slide
-slides.forEach(initializeSlideControls);
-
-// Optional: Reset transition after moving
-track.addEventListener('transitionend', () => {
-    track.style.transition = '';
+    moveToSlide(track, currentSlide, prevSlide);
 });
 
-function scrollToSection() {
-    const section = document.getElementById('done-section');
-    const offset = 80;
+nextButton.addEventListener('click', e => {
+    const currentSlide = track.querySelector('.current-slide');
+    const nextSlide = currentSlide.nextElementSibling;
 
-    window.scrollTo({
-        top: section.offsetTop - offset,
-        behavior: 'smooth'
-    });
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('playButton').addEventListener('click', scrollToSection);
+    moveToSlide(track, currentSlide, nextSlide);
 });
+
 
 //The switch-image function
 
