@@ -232,7 +232,6 @@ html, body {
   margin: 0;
   padding: 0;
   list-style: none;
-  white-space: nowrap;
 }
 
 .blur-box{
@@ -273,8 +272,8 @@ html, body {
   gap: 0 3rem;
   align-items: center;
   flex-grow: 1;
-  width: 86vw;
   flex: 0 0 auto;
+  width: 100%;
 }
 
 .status{
