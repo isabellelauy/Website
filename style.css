@@ -9,6 +9,14 @@ html, body {
   color: #D4D0FF;
 }
 
+#home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
 /* Declaring the fonts */
 
 .dm-sans-title {
@@ -214,7 +222,7 @@ html, body {
 /* Page content goes here */
 
 .main-carousel__track-container{
-  position: relative;
+  /* position: relative; */
   height: 100%;
   padding: 0;
   margin: 0;
@@ -223,7 +231,7 @@ html, body {
 }
 
 .main-carousel__track{
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   text-decoration: none; 
   transition: transform 500ms ease-in;
@@ -233,15 +241,13 @@ html, body {
   padding: 0;
   list-style: none;
   white-space: nowrap;
+  box-sizing: border-box;
 }
 
 .blur-box{
-  position: absolute;
-  top: 103px;
-  left: 4vw;
-  bottom: 73px;
   width: 92vw;
   border-radius: 10px;
+  height: 90%;
   padding:  50px;
   margin: 0;
   background: rgba(217, 217, 217, 0.20);
@@ -267,7 +273,6 @@ html, body {
 }
 
 .homepage-grid2{
-  position: flex;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 0 3rem;
@@ -275,6 +280,7 @@ html, body {
   flex-grow: 1;
   width: 86vw;
   flex: 0 0 auto;
+  background: green;
 }
 
 .status{
