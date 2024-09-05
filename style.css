@@ -12,9 +12,17 @@ html, body {
 #home-page {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding-top: 100px;
+  padding-bottom: 1450px;
+}
+
+#about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+  padding-bottom: 420px;
 }
 
 /* Declaring the fonts */
@@ -222,7 +230,6 @@ html, body {
 /* Page content goes here */
 
 .main-carousel__track-container{
-  /* position: relative; */
   height: 100%;
   padding: 0;
   margin: 0;
@@ -231,7 +238,6 @@ html, body {
 }
 
 .main-carousel__track{
-  /* position: absolute; */
   display: flex;
   text-decoration: none; 
   transition: transform 500ms ease-in;
@@ -247,9 +253,8 @@ html, body {
 .blur-box{
   width: 92vw;
   border-radius: 10px;
-  height: 90%;
-  padding:  50px;
-  margin: 0;
+  height: 85%;
+  padding: 0 50px;
   background: rgba(217, 217, 217, 0.20);
   backdrop-filter: blur(5px);  
   display: flex;
@@ -279,7 +284,7 @@ html, body {
   align-items: center;
   flex-grow: 1;
   flex: 0 0 auto;
-  width: 86vw;
+  width: 90vw;
 }
 
 .status{
@@ -374,6 +379,23 @@ html, body {
   align-items: start;
 }
 
+.carousel-box {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+}
+
+.carousel-box__about{
+  position: relative;
+  background: #5B5C8C;
+  border-radius: 10px;
+  height: 100%;
+  padding: 0 30px;
+}
+
 .carousel-box .play{
   background: url('play-circle-purple.png') no-repeat center center;
   background-color: transparent;
@@ -391,15 +413,6 @@ html, body {
   &:active{
     scale: 0.95;
   }
-}
-
-.carousel-box {
-  position: relative;
-  background: #fff;
-  border-radius: 10px;
-  width: 100%;
-  padding-top: 100%;
-  overflow: hidden;
 }
 
 .carousel-box img{
@@ -421,7 +434,6 @@ html, body {
 }
 
 .about-grid-container{
-  position: absolute;
   top: 1px;
   left: 73px;
   padding:  0 0;
@@ -468,15 +480,15 @@ html, body {
   position: absolute;
   width: 90%;
   height: 3px;
-  left: 5%;
-  right: 5%;
+  left: 3%;
+  right: 3%;
   background: rgba(255, 255, 255, 0.30);
 }
 
 .footer-grid{
   position: absolute;
-  left: 5%;
-  width: 90%;
+  left: 3%;
+  width: 94%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -494,12 +506,12 @@ html, body {
 
 #about-page .footer-divider{
   /*top: 85%;*/
-  top: 200%;
+  top: 145%;
 }
 
 #about-page .footer-grid{
   /*top: 88%;*/
-  top: 203%;
+  top: 148%;
 }
 
 .footer-icons{
