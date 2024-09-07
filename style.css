@@ -57,6 +57,7 @@ img{
   font-weight: 700;
   line-height: normal;
   left: 72px;
+  margin-top: 3em;
 }
 
 .dm-sans-subheader1{
@@ -195,7 +196,7 @@ img{
   height: 25px;
   width: 25px;
   top: 46px;
-  right: 26px;
+  right: 25px;
   position: fixed;
   justify-content: center;
   flex-direction: column;
@@ -260,7 +261,7 @@ img{
   margin: 0;
   padding: 0;
   list-style: none;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
   box-sizing: border-box;
 }
 
@@ -281,7 +282,6 @@ img{
   grid-template-rows: 4fr 1fr 1fr;
   gap: 2rem;
   align-items: center;
-  flex-grow: 1;
 }
 
 .homepage-grid2{
@@ -289,19 +289,10 @@ img{
   grid-template-columns: 2fr 5fr;
   gap: 0 3rem;
   align-items: center;
-  flex-grow: 1;
   flex: 0 0 auto;
-  width: 90vw;
+  width: 100%;
   box-sizing: border-box;
   height: 100%;
-}
-
-.homepage-grid2 img{
-  width: 100%;
-  max-width: 90%;
-  border-radius: 10px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
 }
 
 .status{
@@ -376,6 +367,15 @@ img{
 
   overflow-x: auto;
   overscroll-behavior-inline: contain;
+}
+
+#about-page .carousel{
+  height: 140px;
+  grid-auto-columns: 21%;
+}
+
+.carousel img{
+  max-width: 100%;
 }
 
 .carousel::after {
@@ -464,6 +464,10 @@ img{
   flex-grow: 1;
 }
 
+#scotia-empower-page .about-grid{
+  grid-template-columns: 1fr 4fr;
+}
+
 .headshot-about{
   background: #fff;
   border-radius: 10px;
@@ -527,15 +531,7 @@ img{
   gap: 2rem;
   align-items: center;
   flex-grow: 1;
-}
-
-#home-page .footer-grid{
-  top: 249%;
-}
-
-#about-page .footer-grid{
   margin-top: 1em;
-  margin-bottom: 1em;
 }
 
 .footer-icons{
@@ -586,54 +582,63 @@ img{
   }
 }
 
+.footer-end{
+  height: 2em;
+}
+
 /* Mobile view adjustments here */
 
 @media (max-width: 1000px) {
   #home-page {
     flex-direction: column;
     align-items: center;
-    padding-top: 50;
-    padding-left: 25px;
+    padding: 50px 25px 0 25px;
   }
   
   #about-page {
     flex-direction: column;
     align-items: center;
-    padding-top: 50;
-    padding-left: 25px;
+    padding: 50px 25px 0 25px;
   }
   
   #scotia-empower-page {
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
-    padding-left: 25px;
+    padding: 50px 25px 0 25px;
   }
-  
+
+  img{
+    max-width: 100%;
+  }
+
   .dm-sans-title {
-    font-size: 40px;
+    font-size: 35px;
+    margin: 0;
   }
 
   .dm-sans-header {
-    font-size: 35px;
-    left: 25px;
+    font-size: 28px;
+    margin-top: 1.5em;
   }
 
   .dm-sans-subheader1{
-    font-size: 20px;
-    margin: 12px 0 0 0;
+    font-size: 17px;
+    font-weight: 300;
+  }
+
+  .dm-sans-subheader2{
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
   }
 
   .dm-sans-date{
-    font-size: 17px;
+    font-size: 13px;
   }
-
-  .blur-box{
-    padding:  35px 50px;
-    width: calc(100% - 25px);
-    background: rgba(217, 217, 217, 0.10);
-    display: flex;
-    box-sizing: border-box;
+  
+  .dm-sans-subheader3{
+    font-size: 14px;
+    margin: 0;
   }
 
   #nav {
@@ -647,70 +652,88 @@ img{
   .ham-menu {
     top: 12px;
     display: flex;
-    margin-right: 26px;
   }
 
+  .blur-box{
+    width: 100%;
+    height: 90%;
+    padding: 25px 25px 0 25px;
+  }
+  
   .homepage-grid{
-    gap: 1.5rem;
+    gap: 1.5em;
   }
-
-  .homepage-grid2 {
+  
+  .homepage-grid2{
     grid-template-columns: 1fr;
+    justify-items: center;
     text-align: center;
   }
 
-  .headshot {
-    margin: 0 auto;
+  .carousel{
+    gap: 4%;
     width: 100%;
-    padding-top: 100%;
+    grid-auto-flow: column; 
+    grid-auto-columns: 45%; 
   }
 
-  .carousel{
-    gap: 2%;
-    width: calc(100% - 25px);
-    grid-auto-flow: column; 
-    grid-auto-columns: 45%;
-    scroll-padding-left: 25px;
-    margin-left: 25px;
+  .carousel-box .play{
+    width: 35px;
+    height: 35px;
+    left: 18%;
+    top: 74%;
   }
-  
-  .carousel::after {
-    content: '';
-    display: block;
-    width: 17px; /* Spacer width */
-    flex-shrink: 0;
+
+  #about-page .carousel{
+    height: 145px;
+    grid-auto-columns: 50%;
   }
 
   .about-grid{
     grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   .about-grid-container{
-    position: absolute;
-    top: 50px;
-    left: 17px;
-    padding:  35px 25px;
-    width: calc(100% - 34px);
+    width: 100%;
+  }
+
+  #scotia-empower-page .about-grid{
+    grid-template-columns: 1fr;
   }
 
   #about-page .dm-sans-date {
     margin-top: 25px;
   }
 
+  .project-breakdown-grid{
+    margin-top: 2em;
+  }
+  
+  .project-description-grid{
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .project-description-grid .dm-sans-header{
+    margin-bottom: 0;
+  }
+
   .footer-divider{
-    position: absolute;
-    width: 86%;
+    width: 100%;
     height: 2px;
-    left: 7%;
-    right: 7%;
-    background: rgba(255, 255, 255, 0.30);
+    margin-top: 3em;
+  }
+
+  #scotia-empower-page .footer-divider{
+    display: none;
   }
 
   .footer-grid{
     grid-template-columns: 1fr;
-    gap: 2rem;
-    left: 7%;
-    width: 86%;
+    gap: 1em;
+    width: 100%;
+    margin-top: 1em;
   }
 
   .footer-icons{
@@ -718,36 +741,19 @@ img{
     gap: 1rem;
   }
 
-  #about-page .footer-divider{
-    top: 162%;
-  }
-
-  #about-page .footer-grid{
-    top: 164%;
-  }
-
-  #home-page .footer-divider{
-    top: 243%;
-  }
-
-  #home-page .footer-grid{
-    top: 246%;
-  }
-
   .footer-icons .email{
-    width: 40px;
-    height: 40px;
-
+    width: 30px;
+    height: 30px;
   }
   
   .footer-icons .linkedin{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
   
   .footer-icons .github {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
 
 
