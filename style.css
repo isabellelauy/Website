@@ -18,6 +18,7 @@ img{
 }
 
 #home-page {
+  height: 100%;
   flex-direction: column;
   align-items: center;
   padding: 100px 73px 0 73px;
@@ -637,7 +638,7 @@ img{
 
   .dm-sans-header {
     font-size: 28px;
-    margin-top: 1.5em;
+    margin-top: 2.5em;
   }
 
   .dm-sans-subheader1{
@@ -673,14 +674,15 @@ img{
     display: flex;
   }
 
-  .blur-box{
+  .homepage-container{
     width: 100%;
     height: 90%;
-    padding: 25px 25px 0 25px;
+    padding: 50px 25px 0 25px;
   }
   
   .homepage-grid{
     gap: 1.5em;
+    grid-template-rows: 4fr 1fr 1fr;
   }
   
   .homepage-grid2{
