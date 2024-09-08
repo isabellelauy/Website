@@ -288,7 +288,7 @@ img{
   width: 100%;
   border-radius: 10px;
   height: 83%;
-  padding: 20% 25px 0 25px;
+  padding: 10% 25px 0 25px;
   /*background: rgba(217, 217, 217, 0.20);*/
   backdrop-filter: blur(0px);
   display: flex;
