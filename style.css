@@ -7,6 +7,7 @@ html, body {
   scroll-behavior: smooth;
   background: #2C2D61;
   color: #D4D0FF;
+  position: relative;
 }
 
 img{
@@ -290,13 +291,10 @@ img{
   border-radius: 10px;
   height: 83%;
   padding: 10% 25px 0 25px;
-  /*background: rgba(217, 217, 217, 0.20);*/
   backdrop-filter: blur(0px);
   display: flex;
   box-sizing: border-box;
 }
-
-
 
 .homepage-grid{
   display: grid;
@@ -631,6 +629,14 @@ img{
     max-width: 100%;
   }
 
+  .homebackground{
+    z-index: 1;
+  }
+
+  .homebackground__transition{
+    z-index: 2;
+  }
+
   .dm-sans-title {
     font-size: 35px;
     margin: 0;
@@ -677,12 +683,13 @@ img{
   .homepage-container{
     width: 100%;
     height: 90%;
-    padding: 50px 25px 0 25px;
+    padding: 0 25px 0 25px;
   }
   
   .homepage-grid{
     gap: 1.5em;
-    grid-template-rows: 4fr 1fr 1fr;
+    grid-template-rows: 6fr 1fr 1fr;
+    z-index: 3;
   }
   
   .homepage-grid2{
