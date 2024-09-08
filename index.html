@@ -11,184 +11,190 @@
   <link rel="shortcut icon" href="favicon.ico">
 </head>
 
-<body id="home-page">
-    <div class="nav-menu">
-        <a class="icon" href="index.html">IL</a>
+<body>
+    <div class="homebackground"></div>
 
-        <div id="nav">
-            <ul>
-                <li><a href="index.html" class="dm-sans-menu" onclick="scrollToSection()">Work</a></li>
-                <li><a href="about.html" class="dm-sans-menu">About</a></li>
-                <li><a href="https://drive.google.com/file/d/1Na50_sVZSTdBrIvLYPz17sUAXdiYzEj3/view?usp=sharing" target=”_blank” class="dm-sans-menu">Resume</a></li>
-            </ul>
-        </div>
+    <div class="homebackground__transition"></div>
 
-        <div class = "off-screen-menu" id="off-screen-menu">
-            <ul>
-                <li><a href="index.html" class="dm-sans-menu" onclick="scrollToSection()">Work</a></li>
-                <li><a href="about.html" class="dm-sans-menu">About</a></li>
-                <li><a href="https://drive.google.com/file/d/1Na50_sVZSTdBrIvLYPz17sUAXdiYzEj3/view?usp=sharing" target=”_blank” class="dm-sans-menu">Resume</a></li>
-            </ul>
-        </div>
+    <div id="home-page">
+        <div class="nav-menu">
+            <a class="icon" href="index.html">IL</a>
 
-        <nav>
-            <div class="ham-menu" id="ham-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-        </nav>
-
-    </div>
-
-    <div class="blur-box current-slide">
-        <div class="homepage-grid">
-            <div class="main-carousel__track-container">
-                <ul class="main-carousel__track">
-                    <li class="homepage-grid2 current-slide">
-                        <img src="./media/headshot.jpg" alt="TD Logo">
-                        <div>
-                            <h1 class="dm-sans-title">Isabelle Lau</h1>
-                            <h2 class="dm-sans-subheader1">seeking Winter 2024 internships</h2>
-                        </div>
-                    </li>
-                    <li class="homepage-grid2">
-                        <img src="./media/td-invent.jpg" alt="TD Logo">
-                        <div>
-                            <h1 class="dm-sans-title">Isabelle Lau</h1>
-                            <h2 class="dm-sans-subheader1">Prev @TD Bank as a Product Analyst</h2>
-                        </div>
-                    </li>
-                    <li class="homepage-grid2">
-                        <img src="./media/e7.png" alt="TD Logo">
-                        <div>
-                            <h1 class="dm-sans-title">Isabelle Lau</h1>
-                            <h2 class="dm-sans-subheader1">Systems Design Engineering @ the University of Waterloo</h2>
-                        </div>
-                    </li>
+            <div id="nav">
+                <ul>
+                    <li><a href="index.html" class="dm-sans-menu" onclick="scrollToSection()">Work</a></li>
+                    <li><a href="about.html" class="dm-sans-menu">About</a></li>
+                    <li><a href="https://drive.google.com/file/d/1Na50_sVZSTdBrIvLYPz17sUAXdiYzEj3/view?usp=sharing" target=”_blank” class="dm-sans-menu">Resume</a></li>
                 </ul>
             </div>
+
+            <div class = "off-screen-menu" id="off-screen-menu">
+                <ul>
+                    <li><a href="index.html" class="dm-sans-menu" onclick="scrollToSection()">Work</a></li>
+                    <li><a href="about.html" class="dm-sans-menu">About</a></li>
+                    <li><a href="https://drive.google.com/file/d/1Na50_sVZSTdBrIvLYPz17sUAXdiYzEj3/view?usp=sharing" target=”_blank” class="dm-sans-menu">Resume</a></li>
+                </ul>
+            </div>
+
+            <nav>
+                <div class="ham-menu" id="ham-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </nav>
+
+        </div>
+
+        <div class="homepage-container current-slide">
+            <div class="homepage-grid">
+                <div class="main-carousel__track-container">
+                    <ul class="main-carousel__track">
+                        <li class="homepage-grid2 current-slide">
+                            <img src="./media/headshot.jpg" alt="TD Logo">
+                            <div>
+                                <h1 class="dm-sans-title">Isabelle Lau</h1>
+                                <h2 class="dm-sans-subheader1">seeking Winter 2024 internships</h2>
+                            </div>
+                        </li>
+                        <li class="homepage-grid2">
+                            <img src="./media/td-invent.jpg" alt="TD Logo">
+                            <div>
+                                <h1 class="dm-sans-title">Isabelle Lau</h1>
+                                <h2 class="dm-sans-subheader1">Prev @TD Bank as a Product Analyst</h2>
+                            </div>
+                        </li>
+                        <li class="homepage-grid2">
+                            <img src="./media/e7.png" alt="TD Logo">
+                            <div>
+                                <h1 class="dm-sans-title">Isabelle Lau</h1>
+                                <h2 class="dm-sans-subheader1">Systems Design Engineering @ the University of Waterloo</h2>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="status">
+                    <div class="status-filled" style="width: 20%;"></div>
+                </div>
+
+                <div class="controls">
+                    <button class="prev"></button>
+                    <button class="play" onclick="scrollToSection()"></button>
+                    <button class="next"></button>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="dm-sans-header" id="done-section">What I've Done</h2>
+        <div class="carousel snaps-inline" >
+            <div class="carousel-item">
+                <div class="carousel-box">
+                    <img src="./media/TD-logo.png" alt="TD Logo" class="main-image" data-hover="./media/TDinvent.jpg">
+                </div>
+                <h3 class="dm-sans-subheader1">Product Analyst</h3>
+                <h3 class="dm-sans-subheader2">TD Bank</h3>
+                <h3 class="dm-sans-date">May 2024 - Aug 2024</h3>
+            </div>
+        
+            <div class="carousel-item">
+                <div class="carousel-box">
+                    <img src="./media/TD-logo.png" alt="TD Logo" class="main-image" data-hover="./media/TD-team1.jpg">
+                </div>
+                <h3 class="dm-sans-subheader1">Innovation Product Consultant</h3>
+                <h3 class="dm-sans-subheader2">TD Bank</h3>
+                <h3 class="dm-sans-date">Sept 2023 - Dec 2023</h3>
+            </div>
+
+            <div class="carousel-item">
+                <div class="carousel-box">
+                    <img src="./media/questrade.png" alt="TD Logo">
+                </div>
+                <h3 class="dm-sans-subheader1">UX Researcher</h3>
+                <h3 class="dm-sans-subheader2">Questrade</h3>
+                <h3 class="dm-sans-date">Jan 2023 - Apr 2023</h3>
+            </div>
+
+            <div class="carousel-item">
+                <div class="carousel-box">
+                    <img src="./media/helio.png" alt="TD Logo">
+                </div>
+                <h3 class="dm-sans-subheader1" >Co-Founder</h3>
+                <h3 class="dm-sans-subheader2">Helio</h3>
+                <h3 class="dm-sans-date">Jul 2021 - May 2022 </h3>
+            </div>
+
+            <div class="carousel-item">
+                <div class="carousel-box">
+                    <img src="./media/ucigati.png" alt="TD Logo" class="main-image" data-hover="./media/fireball.jpg">
+                </div>
+                <h3 class="dm-sans-subheader1">Visioneer</h3>
+                <h3 class="dm-sans-subheader2">UCI X GATI</h3>
+                <h3 class="dm-sans-date">Jul 2022 - Aug 2022 </h3>
+            </div>
+
+        </div>
+
+        <h2 class="dm-sans-header">What I've Built</h2>
+        <div class="carousel snaps-inline">
+            <div class="carousel-item">
+                <div class="carousel-box">
+                    <img src="./media/Scotiabank-logo.png" alt="Scotiabank Logo">
+                    <a href="scotia-empower.html" class="play"></a>
+                </div>
+                <h3 class="dm-sans-subheader1">Scotia Empower</h3>
+                <h3 class="dm-sans-subheader2">Scotiabank</h3>
+                <h3 class="dm-sans-date">Sept 2023</h3>
+            </div>
+        
+            <div class="carousel-item">
+                <div class="carousel-box">
+                    <img src="./media/TKS-logo.png" alt="The Knowledge Society Logo">
+                    <a href="#heyhey" class="play"></a>
+                </div>
+                <h3 class="dm-sans-subheader1">Virus Detecting Masks</h3>
+                <h3 class="dm-sans-subheader2">The Knowledge Society</h3>
+                <h3 class="dm-sans-date">Jan 2023</h3>
+            </div>
+
+            <div class="carousel-item">
+                <div class="carousel-box">
+                    <img src="./media/UN-logo.png" alt="United Nations Logo">
+                </div>
+                <h3 class="dm-sans-subheader1">InnoTech</h3>
+                <h3 class="dm-sans-subheader2">United Nations</h3>
+                <h3 class="dm-sans-date">July 2021</h3>
+            </div>
+
+            <div class="carousel-item">
+                <div class="carousel-box">
+                    <img src="./media/ConvergenceTech-logo.png" alt="Convergence.tech Logo">
+                </div>
+                <h3 class="dm-sans-subheader1" >Challenge for Climate Action</h3>
+                <h3 class="dm-sans-subheader2">convergence.tech</h3>
+                <h3 class="dm-sans-date">July 2022</h3>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+        <div class="footer-grid">
+            <div>
+                <h2 class="dm-sans-subheader3">Made with 💜 in Toronto, Canada</h2>
+                <h2 class="dm-sans-subheader3">©️ Isabelle Lau, 2024</h2>
+            </div>
             
-            <div class="status">
-                <div class="status-filled" style="width: 20%;"></div>
+            <div class="footer-icons">
+                <button class="email"></button>
+                <a class="linkedin" href="https://ca.linkedin.com/in/ilau" target="_blank"></a>
+                <button class="github"></button>
             </div>
 
-            <div class="controls">
-                <button class="prev"></button>
-                <button class="play" onclick="scrollToSection()"></button>
-                <button class="next"></button>
-            </div>
+            
         </div>
+
+        <div class="footer-end"></div>
+        <script src="index.js"></script>
     </div>
-    
-    <h2 class="dm-sans-header" id="done-section">What I've Done</h2>
-    <div class="carousel snaps-inline" >
-        <div class="carousel-item">
-            <div class="carousel-box">
-                <img src="./media/TD-logo.png" alt="TD Logo" class="main-image" data-hover="./media/TDinvent.jpg">
-            </div>
-            <h3 class="dm-sans-subheader1">Product Analyst</h3>
-            <h3 class="dm-sans-subheader2">TD Bank</h3>
-            <h3 class="dm-sans-date">May 2024 - Aug 2024</h3>
-        </div>
-    
-        <div class="carousel-item">
-            <div class="carousel-box">
-                <img src="./media/TD-logo.png" alt="TD Logo" class="main-image" data-hover="./media/TD-team1.jpg">
-            </div>
-            <h3 class="dm-sans-subheader1">Innovation Product Consultant</h3>
-            <h3 class="dm-sans-subheader2">TD Bank</h3>
-            <h3 class="dm-sans-date">Sept 2023 - Dec 2023</h3>
-        </div>
-
-          <div class="carousel-item">
-            <div class="carousel-box">
-                <img src="./media/questrade.png" alt="TD Logo">
-            </div>
-            <h3 class="dm-sans-subheader1">UX Researcher</h3>
-            <h3 class="dm-sans-subheader2">Questrade</h3>
-            <h3 class="dm-sans-date">Jan 2023 - Apr 2023</h3>
-        </div>
-
-        <div class="carousel-item">
-            <div class="carousel-box">
-                <img src="./media/helio.png" alt="TD Logo">
-            </div>
-            <h3 class="dm-sans-subheader1" >Co-Founder</h3>
-            <h3 class="dm-sans-subheader2">Helio</h3>
-            <h3 class="dm-sans-date">Jul 2021 - May 2022 </h3>
-        </div>
-
-        <div class="carousel-item">
-            <div class="carousel-box">
-                <img src="./media/ucigati.png" alt="TD Logo" class="main-image" data-hover="./media/fireball.jpg">
-            </div>
-            <h3 class="dm-sans-subheader1">Visioneer</h3>
-            <h3 class="dm-sans-subheader2">UCI X GATI</h3>
-            <h3 class="dm-sans-date">Jul 2022 - Aug 2022 </h3>
-        </div>
-
-    </div>
-
-    <h2 class="dm-sans-header">What I've Built</h2>
-    <div class="carousel snaps-inline">
-        <div class="carousel-item">
-            <div class="carousel-box">
-                <img src="./media/Scotiabank-logo.png" alt="Scotiabank Logo">
-                <a href="scotia-empower.html" class="play"></a>
-            </div>
-            <h3 class="dm-sans-subheader1">Scotia Empower</h3>
-            <h3 class="dm-sans-subheader2">Scotiabank</h3>
-            <h3 class="dm-sans-date">Sept 2023</h3>
-        </div>
-    
-        <div class="carousel-item">
-            <div class="carousel-box">
-                <img src="./media/TKS-logo.png" alt="The Knowledge Society Logo">
-                <a href="#heyhey" class="play"></a>
-            </div>
-            <h3 class="dm-sans-subheader1">Virus Detecting Masks</h3>
-            <h3 class="dm-sans-subheader2">The Knowledge Society</h3>
-            <h3 class="dm-sans-date">Jan 2023</h3>
-        </div>
-
-          <div class="carousel-item">
-            <div class="carousel-box">
-                <img src="./media/UN-logo.png" alt="United Nations Logo">
-            </div>
-            <h3 class="dm-sans-subheader1">InnoTech</h3>
-            <h3 class="dm-sans-subheader2">United Nations</h3>
-            <h3 class="dm-sans-date">July 2021</h3>
-        </div>
-
-        <div class="carousel-item">
-            <div class="carousel-box">
-                <img src="./media/ConvergenceTech-logo.png" alt="Convergence.tech Logo">
-            </div>
-            <h3 class="dm-sans-subheader1" >Challenge for Climate Action</h3>
-            <h3 class="dm-sans-subheader2">convergence.tech</h3>
-            <h3 class="dm-sans-date">July 2022</h3>
-        </div>
-    </div>
-
-    <div class="footer-divider"></div>
-    <div class="footer-grid">
-        <div>
-            <h2 class="dm-sans-subheader3">Made with 💜 in Toronto, Canada</h2>
-            <h2 class="dm-sans-subheader3">©️ Isabelle Lau, 2024</h2>
-        </div>
-        
-        <div class="footer-icons">
-            <button class="email"></button>
-            <a class="linkedin" href="https://ca.linkedin.com/in/ilau" target="_blank"></a>
-            <button class="github"></button>
-        </div>
-
-        
-    </div>
-
-    <div class="footer-end"></div>
-    <script src="index.js"></script>
 </body>
 </html>
